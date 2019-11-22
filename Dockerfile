@@ -1,6 +1,6 @@
 FROM nvidia/cuda:10.0-cudnn7-devel-ubuntu16.04
+LABEL maintainer caffe-maint@googlegroups.com
 
-# install basic tools
 RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
         cmake \
@@ -21,8 +21,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         python-numpy \
         python-pip \
         python-setuptools \
-        python-scipy
-#    rm -rf /var/lib/apt/lists/*
+        python-scipy && \
+    rm -rf /var/lib/apt/lists/*
 
 ENV CAFFE_ROOT=/opt/caffe
 WORKDIR $CAFFE_ROOT
