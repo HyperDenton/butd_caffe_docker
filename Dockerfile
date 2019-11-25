@@ -27,7 +27,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         python-scipy && \
     rm -rf /var/lib/apt/lists/*
     
-RUN git clone https://github.com/peteanderson80/bottom-up-attention.git
+RUN git clone https://github.com/HyperDenton/bottom-up-attention.git
 RUN cp -r ./bottom-up-attention /opt/butd
 
 ENV CAFFE_ROOT=/opt/butd/caffe
